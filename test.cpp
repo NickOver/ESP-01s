@@ -18,7 +18,8 @@ int initWiFi();
 int ATWiFi();
 int getBlock();
 
-int main(int argc, char** argv) {  initWiFi();
+int main(int argc, char** argv) {  
+ initWiFi();
  ATWiFi();
  return (EXIT_SUCCESS);
 }
@@ -26,6 +27,7 @@ int main(int argc, char** argv) {  initWiFi();
  
 
 int initWiFi() {
+ print("Starting");
 system("sudo systemctl stop serial-getty@ttyAMA0.service");
 
  sfd = open("/dev/serial0", O_RDWR | O_NOCTTY);
