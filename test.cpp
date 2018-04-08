@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
  
 
 int initWiFi() {
- print("Starting");
+ printf("Starting");
 system("sudo systemctl stop serial-getty@ttyAMA0.service");
 
  sfd = open("/dev/serial0", O_RDWR | O_NOCTTY);
